@@ -1,8 +1,23 @@
 aid: lyten
 name: Lyten
-description: 'Lyten is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Lyten is a San Jose, California advanced-materials company founded in
+  2015 that invented and commercializes Lyten 3D Graphene, a tunable three-dimensional
+  carbon supermaterial produced by converting methane into nanostructured carbon while
+  co-producing hydrogen. Lyten applies that materials platform across four product
+  lines: lithium-sulfur battery cells and battery systems that contain no cobalt, nickel
+  or manganese and target roughly 40% weight savings versus lithium-ion; 3D graphene
+  reinforced 3D printer filament; concrete admixture and structural adhesives; and
+  chemical/environmental sensors, including the Lyten Atmos continuous methane-intelligence
+  platform that pairs solar-powered LTE field sensors with cloud analytics and dashboards
+  for landfill and oil-and-gas emissions monitoring. The company has raised over $600
+  million from investors including Stellantis, FedEx and Honeywell, operates a 145,000
+  sq ft pilot manufacturing facility in the Alviso district of North San Jose, acquired
+  Cuberg''s San Leandro battery assets in 2024, and in 2025 acquired Northvolt battery
+  manufacturing assets in Poland and Sweden, establishing a European headquarters in
+  Gdansk, Poland. Lyten is a private company; its shares trade on secondary markets
+  such as Forge Global. It publishes no public developer API, SDK or developer portal.'
 url: https://raw.githubusercontent.com/api-evangelist/lyten/refs/heads/main/apis.yml
+image: https://lyten.com/wp-content/uploads/cropped-lyten-favicon.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +27,17 @@ created: '2026-08-01'
 modified: '2026-08-01'
 tags:
 - Company
+- Advanced Materials
+- Batteries
+- Energy Storage
+- Graphene
+- Manufacturing
+- Electric Vehicles
+- Sensors
+- Methane Monitoring
+- Clean Energy
+- Lithium-Sulfur
+- 3D Printing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +45,44 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/lyten-domain-security.yml
 - type: Website
+  url: https://lyten.com/
+- type: About
+  url: https://lyten.com/about-us/
+- type: Blog
+  url: https://lyten.com/news/
+- type: PrivacyPolicy
+  url: https://lyten.com/privacy/
+- type: Contact
+  url: https://lyten.com/contact-us/
+- type: Careers
+  url: https://lyten.com/about-us/careers/
+- type: SecondaryMarket
   url: https://forgeglobal.com/lyten_stock/
+- type: LLMsTxt
+  url: llms/lyten-llms.txt
+x-enrichment:
+  date: '2026-08-01'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-discovery:
+  date: '2026-08-01'
+  api_surface: none
+  probed:
+  - openapi/swagger on lyten.com and every resolving subdomain (404 / wildcard redirect)
+  - graphql introspection (no /graphql surface)
+  - mcp tools/list (no MCP server published or referenced)
+  - /.well-known/agent-card.json and /.well-known/agent.json (404, no A2A card)
+  - /.well-known/security.txt, openid-configuration, oauth-authorization-server,
+    api-catalog, ai-plugin.json (all 404)
+  - npm, PyPI, crates.io for first-party client libraries (none)
+  - github.com/Lyten is an unrelated personal account, not a Lyten organization
+  note: >-
+    Lyten is an advanced-materials and battery manufacturer with no public API
+    program. The Lyten Atmos methane platform ships dashboards to commercial
+    customers but documents no public API. lyten.com runs WordPress and serves
+    the WordPress core REST API at /wp-json/; that is CMS infrastructure and is
+    deliberately not catalogued as a Lyten API.

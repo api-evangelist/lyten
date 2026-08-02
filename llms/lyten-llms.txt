@@ -1,0 +1,50 @@
+# Lyten
+
+> Lyten is a San Jose, California advanced-materials company founded in 2015 that invented Lyten 3D Graphene — a tunable three-dimensional carbon supermaterial produced by converting methane into nanostructured carbon while co-producing hydrogen. Lyten applies that platform to lithium-sulfur batteries (no cobalt, nickel or manganese), 3D printer filament, concrete admixture and structural adhesives, and chemical/environmental sensors including the Lyten Atmos continuous methane-intelligence platform. Lyten publishes no public developer API, SDK, or developer portal; this file describes the company's public web surface only.
+
+## Company
+
+- [Lyten](https://lyten.com/): Company homepage — "The Supermaterial Applications Company".
+- [About Us](https://lyten.com/about-us/): Company overview, leadership and history.
+- [Careers](https://lyten.com/about-us/careers/): Culture and benefits; US and EU openings are posted on Workday.
+- [Contact Us](https://lyten.com/contact-us/): Contact and demo-request form.
+- [Privacy Policy](https://lyten.com/privacy/): Privacy notice and cookie consent controls.
+- [News](https://lyten.com/news/): Dated press releases and company announcements.
+
+## Technology
+
+- [Lyten 3D Graphene](https://lyten.com/technology/3d-graphene/): The core three-dimensional graphene supermaterial platform.
+- [Lithium-Sulfur](https://lyten.com/technology/lithium-sulfur/): Lithium-sulfur cell chemistry, targeting roughly 40% weight savings versus lithium-ion.
+
+## Products
+
+- [Battery Systems](https://lyten.com/products/battery-systems/): Lithium-sulfur cells, modules and packs for automotive, aerospace, defense and industrial customers.
+- [3D Printer Filament](https://lyten.com/products/3d-printer-filament/): 3D graphene reinforced additive-manufacturing filament.
+- [Concrete Admixture](https://lyten.com/products/concrete-admixture/): Graphene admixture for cementitious materials.
+- [Structural Adhesive](https://lyten.com/products/structural-adhesive/): Graphene-enhanced structural bonding products.
+- [Methane Monitoring (Lyten Atmos)](https://lyten.com/products/methane-monitoring/): Full-stack continuous methane-intelligence platform — solar-powered LTE field sensors, cloud analytics and dashboards for landfill and oil-and-gas emissions monitoring. Access is via a commercial engagement; no public API is documented.
+- [Sensors](https://lyten.com/products/sensors/): Chemical and environmental sensing built on the 3D graphene platform.
+
+## Markets
+
+- [Industries](https://lyten.com/industries/): Automotive, aerospace, defense, shipping and industrial applications.
+- [Motorsports](https://lyten.com/motorsports/): Motorsport battery programs.
+- [Net Zero](https://lyten.com/net-zero/): Sustainability and emissions position.
+- [Northvolt Acquisition](https://lyten.com/northvolt-acquisition/): 2025 acquisition of Northvolt battery manufacturing assets in Poland and Sweden.
+
+## Investment
+
+- [Lyten on Forge Global](https://forgeglobal.com/lyten_stock/): Lyten is a private company; shares trade on secondary markets.
+
+## API surface
+
+- No OpenAPI, Swagger, GraphQL, AsyncAPI, gRPC or MCP contract is published on any Lyten host.
+- No developer portal, API reference, SDK, CLI, Postman collection or public package (npm, PyPI, crates.io) exists.
+- No /.well-known/ discovery document is served (security.txt, agent-card.json, agent.json, openid-configuration, oauth-authorization-server, api-catalog, ai-plugin.json all return HTTP 404).
+- api.lyten.com, app.lyten.com, atmos.lyten.com, developer.lyten.com and docs.lyten.com resolve to a Cloudflare wildcard and redirect to https://lyten.com/ — there is no distinct API host.
+- The site runs WordPress and exposes the WordPress core REST API at https://lyten.com/wp-json/. That is CMS infrastructure, not a Lyten product API, and is not catalogued as one.
+
+---
+generated: 2026-08-01
+method: generated
+source: apis.yml + lyten.com public pages + live discovery probes

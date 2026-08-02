@@ -1,0 +1,63 @@
+generated: '2026-08-01'
+method: probed
+source: live probes of /.well-known/ and root discovery paths on Lyten hosts
+status: none-found
+note: >-
+  No /.well-known/ discovery document is published on any Lyten host. Direct
+  curl requests to lyten.com are rejected by the site WAF with HTTP 403 for
+  every path except /robots.txt and /wp-json/, so every path below was
+  re-probed through a browser-equivalent client to distinguish a WAF block
+  from a genuine absence. All returned a real HTTP 404. api.lyten.com and
+  every other probed subdomain resolve to the same Cloudflare wildcard and
+  301-redirect to https://lyten.com/ — there is no separate API host.
+  Because nothing was found, no `WellKnown` or `SecurityTxt` pointer is wired
+  into apis.yml.
+hosts:
+- host: https://lyten.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /robots.txt
+    status: 200
+    note: served; sitemap directive only, no API discovery hints
+  - path: /wp-json/
+    status: 200
+    note: >-
+      WordPress core REST API route index (302 routes, namespaces wp/v2,
+      oembed/1.0, yoast/v1, gf/v2, divi/v1). This is CMS infrastructure
+      exposed by the site platform, not a Lyten product API — it is recorded
+      here as an observation and deliberately NOT catalogued as an API in
+      apis.yml.
+- host: https://api.lyten.com
+  documents:
+  - path: /
+    status: 301
+    note: redirects to https://lyten.com/ (Cloudflare wildcard, no API host)
+subdomains_probed:
+- {host: api.lyten.com, dns: resolves, result: 301 to lyten.com}
+- {host: app.lyten.com, dns: resolves, result: wildcard catch-all}
+- {host: atmos.lyten.com, dns: resolves, result: wildcard catch-all}
+- {host: developer.lyten.com, dns: resolves, result: wildcard catch-all}
+- {host: docs.lyten.com, dns: resolves, result: wildcard catch-all}
+- {host: portal.lyten.com, dns: resolves, result: wildcard catch-all}
+- {host: trust.lyten.com, dns: resolves, result: wildcard catch-all}
+- {host: status.lyten.com, dns: resolves, result: wildcard catch-all}
+x-evidence:
+  fetched: '2026-08-01'
+  method: curl + browser-equivalent client
