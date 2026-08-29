@@ -17,6 +17,17 @@ description: 'Lyten is a San Jose, California advanced-materials company founded
   Gdansk, Poland. Lyten is a private company; its shares trade on secondary markets
   such as Forge Global. It publishes no public developer API, SDK or developer portal.'
 url: https://raw.githubusercontent.com/api-evangelist/lyten/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://lyten.com/wp-content/uploads/cropped-lyten-favicon.png
 x-type: company
 x-source: harvest:secondary-market
