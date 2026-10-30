@@ -64,25 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Lyten is a San Jose, California advanced-materials company founded in 2015 that invented and commercializes **Lyten 3D Graphene** — a tunable three-dimensional carbon supermaterial produced by converting methane into nanostructured carbon while co-producing hydrogen.
+Lyten is a San Jose, California advanced-materials company founded in 2015 that invented and commercializes Lyten 3D Graphene, a tunable three-dimensional carbon supermaterial produced by converting methane into nanostructured carbon while co-producing hydrogen. Lyten applies that materials platform across four product lines: lithium-sulfur battery cells and battery systems that contain no cobalt, nickel or manganese and target roughly 40% weight savings versus lithium-ion; 3D graphene reinforced 3D printer filament; concrete admixture and structural adhesives; and chemical/environmental sensors, including the Lyten Atmos continuous methane-intelligence platform that pairs solar-powered LTE field sensors with cloud analytics and dashboards for landfill and oil-and-gas emissions monitoring. The company has raised over $600 million from investors including Stellantis, FedEx and Honeywell, operates a 145,000 sq ft pilot manufacturing facility in the Alviso district of North San Jose, acquired Cuberg's San Leandro battery assets in 2024, and in 2025 acquired Northvolt battery manufacturing assets in Poland and Sweden, establishing a European headquarters in Gdansk, Poland. Lyten is a private company; its shares trade on secondary markets such as Forge Global. It publishes no public developer API, SDK or developer portal.
 
-Lyten applies that materials platform across four product lines:
+**Areas:** Company · Advanced Materials · Batteries · Energy Storage · Graphene · Manufacturing · Electric Vehicles · Sensors · Methane Monitoring · Clean Energy · Lithium-Sulfur · 3D Printing
 
-- **Battery systems** — lithium-sulfur cells with no cobalt, nickel or manganese, targeting roughly 40% weight savings versus lithium-ion
-- **3D printer filament** — 3D graphene reinforced additive-manufacturing filament
-- **Construction materials** — concrete admixture and structural adhesives
-- **Sensors** — chemical and environmental sensing, including **Lyten Atmos**, a continuous methane-intelligence platform pairing solar-powered LTE field sensors with cloud analytics and dashboards
+## Lyten on APIs.io
 
-The company has raised over $600 million from investors including Stellantis, FedEx and Honeywell, operates a 145,000 sq ft pilot facility in Alviso (North San Jose), acquired Cuberg's San Leandro battery assets in 2024, and in 2025 acquired Northvolt battery manufacturing assets in Poland and Sweden, establishing a European headquarters in Gdansk.
+Everything profiled for Lyten is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lyten/](https://apis.io/providers/lyten/)** — or go straight to one of the APIs or properties below.
 
-- Website: https://lyten.com/
-- News: https://lyten.com/news/
-- Secondary market: https://forgeglobal.com/lyten_stock/
+### Published properties
 
-## API surface
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-**None.** Lyten publishes no public API program. A full enrichment discovery pass on 2026-08-01 probed every resolving host for OpenAPI/Swagger, GraphQL introspection, an MCP `tools/list` endpoint, an A2A agent card, and the `/.well-known/` discovery surface — all missed. No first-party SDK exists on npm, PyPI or crates.io, and there is no Lyten GitHub organization. `api.lyten.com`, `docs.lyten.com`, `developer.lyten.com` and siblings resolve to a Cloudflare wildcard that redirects to the marketing site.
+#### Security (1)
 
-The site runs WordPress and exposes the WordPress core REST API at `/wp-json/`; that is CMS infrastructure, not a Lyten product API, and is deliberately not catalogued as one.
+Authentication, trust centre, and vulnerability disclosure.
 
-See `apis.yml` `x-discovery` and `well-known/lyten-well-known.yml` for the recorded probe results.
+- [Lyten Domain Security](https://apis.io/security/lyten/lyten-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://lyten.com/)
+- [Blog](https://lyten.com/news/)
+- [Privacy policy](https://lyten.com/privacy/)
+
+## API Evangelist rating
+
+**Kin Score 7.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 8.2** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lyten/](https://apis.io/providers/lyten/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lyten: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lyten/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
